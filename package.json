@@ -1,0 +1,21 @@
+{
+  "name": "com.dandydino.elements",
+  "version": "0.1.0",
+  "displayName": "Dandy Dino Elements",
+  "description": null,
+  "unity": null,
+  "documentationUrl": null,
+  "changelogUrl": null,
+  "licenseUrl": null,
+  "dependencies": {},
+  "keywords": [],
+  "author": {
+    "name": "Dandy Dino",
+    "email": "alberto@argames.com.br",
+    "url": null
+  },
+  "repository": {
+    "type": null,
+    "url": null
+  }
+}
