@@ -6,7 +6,7 @@ namespace DandyDino.Elements
 {
     public partial class Icons
     {
-        private string Path => Directory.Exists("Assets/PackageProjects/DDElements/Editor/Icons")? "Assets/PackageProjects/DDElements/Editor/Icons" : "Packages/com.dandydino.elements/Icons";
+        private string Path => Directory.Exists("Assets/PackageProjects/DDElements/Icons")? "Assets/PackageProjects/DDElements/Icons" : "Packages/com.dandydino.elements/Icons";
         
         public GUIContent BaseSize(string tooltip = "")
         {
