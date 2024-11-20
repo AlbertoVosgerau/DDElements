@@ -1,6 +1,6 @@
 {
     "name": "DandyDino.Elements",
-    "rootNamespace": "",
+    "rootNamespace": "DandyDino.Elements",
     "references": [],
     "includePlatforms": [
         "Editor"
