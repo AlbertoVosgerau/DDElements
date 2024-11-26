@@ -26,11 +26,19 @@ public class DDPropertyDrawer<T>: PropertyDrawer
         {
             return;
         }
-        
+    
         _property = property;
         _label = label;
-        _target = (T) property.managedReferenceValue;
         
+        if (property.propertyType == SerializedPropertyType.ManagedReference)
+        {
+            var managedReference = property.managedReferenceValue;
+            if (managedReference != null)
+            {
+                _target = (T)managedReference;
+            }
+        }
+    
         SerializedProperty iterator = property.Copy();
         SerializedProperty endProperty = property.GetEndProperty();
 
