@@ -14,6 +14,34 @@ namespace DandyDino.Elements
 {
     public class Assets
     {
+        
+        public void LoadScriptByName(string typeName, out object instance)
+        {
+            instance = null;
+            
+            Type type = AppDomain.CurrentDomain
+                .GetAssemblies()
+                .SelectMany(assembly => assembly.GetTypes())
+                .FirstOrDefault(t => t.Name == typeName || t.FullName == typeName);
+
+            if (type == null)
+            {
+                Debug.LogError($"Type '{typeName}' not found.");
+                return;
+            }
+
+            try
+            {
+                instance = Activator.CreateInstance(type);
+            }
+            catch (Exception ex)
+            {
+                Debug.LogError($"Failed to instantiate type '{typeName}': {ex.Message}");
+                instance = null;
+            }
+        }
+        
+        
         public T CreateScriptableObjectAsset<T>(string folder, string fileName) where T : ScriptableObject
         {
             T newInstance = ScriptableObject.CreateInstance<T>();

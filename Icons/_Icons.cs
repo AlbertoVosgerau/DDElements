@@ -44,6 +44,12 @@ namespace DandyDino.Elements
             item.tooltip = tooltip;
             return item;
         }
+        public GUIContent CogWheel(string tooltip = "")
+        {
+            GUIContent item = CustomIcon("cog-wheel", Path);
+            item.tooltip = tooltip;
+            return item;
+        }
         public GUIContent Comment(string tooltip = "")
         {
             GUIContent item = CustomIcon("comment", Path);
@@ -95,6 +101,12 @@ namespace DandyDino.Elements
         public GUIContent Enumerate(string tooltip = "")
         {
             GUIContent item = CustomIcon("enumerate", Path);
+            item.tooltip = tooltip;
+            return item;
+        }
+        public GUIContent Envelope(string tooltip = "")
+        {
+            GUIContent item = CustomIcon("envelope", Path);
             item.tooltip = tooltip;
             return item;
         }
