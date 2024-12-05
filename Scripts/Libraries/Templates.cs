@@ -6,16 +6,18 @@ namespace DandyDino.Elements
 {
     public partial class Templates
     {
-        public void LeadingIconAndButton(GUIContent icon, string title, Color hoverColor, Action onClick,params GUILayoutOption[] options)
+        public void LeadingIconAndButton(GUIContent icon, string title, Color hoverColor, Action onClick, Action leadingContent = null, Action trailingContent = null, params GUILayoutOption[] options)
         {
             DDElements.Layout.Column(() =>
             {
                 DDElements.Layout.Row(() =>
                 {
+                    leadingContent?.Invoke();
                     DDElements.Layout.Space(10);
-                    DDElements.Rendering.Icon(icon, 26);
+                    DDElements.Rendering.Icon(icon, 18);
                     DDElements.Rendering.FlatColorButton(title.ToGUIContent(), DDElements.Colors.Clear, onClick, options);
                     DDElements.Layout.Space(4);
+                    trailingContent?.Invoke();
                 });
                 
                 Rect lastRect = DDElements.Helpers.GetLastRect();

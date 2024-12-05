@@ -1,5 +1,6 @@
 using System;
 using System.Collections.Generic;
+using System.IO;
 using System.Linq;
 using UnityEditor;
 using UnityEngine;
@@ -16,18 +17,13 @@ namespace DandyDino.Elements
             for (int i = 0; i < importedAssets.Length; i++)
             {
                 string importedAsset = importedAssets[i];
+                string assetDirectory = DDElements.Assets.GetAssetDirectory(importedAsset);
                 if (!importedAsset.EndsWith(".png"))
                 {
-                    iconsDatabase = AssetDatabase.LoadAssetAtPath<IconsDatabase>(importedAsset);
-                    if (importedAsset.EndsWith(".asset") && iconsDatabase != null)
-                    {
-                        string importedDirectory = DDElements.Assets.GetAssetDirectory(importedAsset);
-                        iconsDatabase.Refresh();
-                    }
                     return;
                 }
 
-                iconsDatabase = AssetDatabase.LoadAssetAtPath<IconsDatabase>(importedAsset);
+                iconsDatabase = DDElements.Assets.LoadAssetAtDirectory<IconsDatabase>(assetDirectory);
                 if (iconsDatabase == null)
                 {
                     return;

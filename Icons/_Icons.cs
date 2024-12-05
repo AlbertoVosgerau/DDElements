@@ -50,6 +50,24 @@ namespace DandyDino.Elements
             item.tooltip = tooltip;
             return item;
         }
+        public GUIContent ColorEnvelope(string tooltip = "")
+        {
+            GUIContent item = CustomIcon("color-envelope", Path);
+            item.tooltip = tooltip;
+            return item;
+        }
+        public GUIContent ColorGear(string tooltip = "")
+        {
+            GUIContent item = CustomIcon("color-gear", Path);
+            item.tooltip = tooltip;
+            return item;
+        }
+        public GUIContent ColorScript(string tooltip = "")
+        {
+            GUIContent item = CustomIcon("color-script", Path);
+            item.tooltip = tooltip;
+            return item;
+        }
         public GUIContent Comment(string tooltip = "")
         {
             GUIContent item = CustomIcon("comment", Path);
@@ -65,6 +83,12 @@ namespace DandyDino.Elements
         public GUIContent Cubes(string tooltip = "")
         {
             GUIContent item = CustomIcon("cubes", Path);
+            item.tooltip = tooltip;
+            return item;
+        }
+        public GUIContent Dash(string tooltip = "")
+        {
+            GUIContent item = CustomIcon("dash", Path);
             item.tooltip = tooltip;
             return item;
         }

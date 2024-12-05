@@ -557,6 +557,17 @@ namespace DandyDino.Elements
 
             return paths;
         }
+
+        public void OpenAsset(Object asset)
+        {
+            AssetDatabase.OpenAsset(asset);
+        }
+
+        public void OpenAsset<T>(string objectPath) where T : Object
+        {
+            T loadedObject = LoadAssetAtPath<T>(objectPath);
+            AssetDatabase.OpenAsset(loadedObject);
+        }
         
         public void DeleteAssetsInFolder(string path)
         {
@@ -768,6 +779,23 @@ namespace DandyDino.Elements
         public T LoadAssetAtPath<T>(string path) where T : Object
         {
             return AssetDatabase.LoadAssetAtPath<T>(path);
+        }
+        
+        public T LoadAssetAtDirectory<T>(string directory) where T : Object
+        {
+            if (!IsFolderValid(directory))
+            {
+                return null;
+            }
+            
+            string[] assetGuids = AssetDatabase.FindAssets($"t:{nameof(IconsDatabase)}", new[] { directory });
+            if (assetGuids.Length == 0)
+            {
+                return null;
+            }
+            
+            string assetPath = AssetDatabase.GUIDToAssetPath(assetGuids[0]);
+            return AssetDatabase.LoadAssetAtPath<T>(assetPath);
         }
 
         public bool IsAssetMesh3D(string path)
