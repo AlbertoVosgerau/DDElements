@@ -7,6 +7,7 @@
   "unityRelease": "0f1",
   "documentationUrl": "https://github.com/AlbertoVosgerau/DDElements",
   "changelogUrl": "https://github.com/AlbertoVosgerau/DDElements/blob/main/CHANGELOG.md",
+  "license": "WTFPL",
   "licenseUrl":  "https://github.com/AlbertoVosgerau/DDElements/blob/main/LICENSE.md",
   "dependencies": {},
   "keywords": [],
