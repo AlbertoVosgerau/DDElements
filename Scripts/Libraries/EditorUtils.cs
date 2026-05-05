@@ -58,7 +58,7 @@ namespace DandyDino.Elements
             renameAssetUtility.onRename = onRename;
             
             ProjectWindowUtil.StartNameEditingIfProjectWindowExists(
-                asset.GetInstanceID(),
+                asset.GetEntityId(),
                 renameAssetUtility,
                 assetPath,
                 AssetPreview.GetMiniThumbnail(asset), 

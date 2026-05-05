@@ -13,12 +13,14 @@ namespace DandyDino.Elements
         public Color MidDarkGray => new Color(0.17f, 0.17f, 0.17f);
         public Color DarkGray => new Color(0.13f, 0.13f, 0.13f);
         public Color BluishGray => new Color(0.11f, 0.11f, 0.13f);
+        public Color DarkBluishGray => new(0.05f, 0.05f, 0.07f);
         public Color OrangeGray => new Color(0.16f, 0.12f, 0.04f);
 
         public Color LightPurple = new Color(0.71f, 0.41f, 0.91f);
         public Color MidPurple = new Color(0.44f, 0.25f, 0.71f);
         public Color DarkPurple = new Color(0.25f, 0.16f, 0.43f);
         public Color DeepPurple = new Color(0.06f, 0.05f, 0.11f);
+        public Color BlackPurple = new Color(0.02f, 0.01f, 0.07f);
         
         public Color LightBlue = new Color(0.47f, 0.51f, 0.91f);
         public Color MidBlue = new Color(0.23f, 0.26f, 0.71f);

@@ -196,8 +196,8 @@ namespace DandyDino.Elements
                 return;
             }
             
-            int folderInstanceID = folderObject.GetInstanceID();
-            if (projectBrowser == null || folderInstanceID < 0)
+            EntityId folderInstanceID = folderObject.GetEntityId();
+            if (projectBrowser == null || !folderInstanceID.IsValid())
             {
                 return;
             }

@@ -6,7 +6,7 @@ namespace DandyDino.Elements
 {
     public partial class Icons
     {
-        private string Path => Directory.Exists("Assets/PackageProjects/DDElements/Icons")? "Assets/PackageProjects/DDElements/Icons" : "Packages/com.dandydino.elements/Icons";
+        private string Path => Directory.Exists("Assets/DDElements/Icons")? "Assets/DDElements/Icons" : "Packages/com.dandydino.elements/Icons";
         
         public GUIContent BaseSize(string tooltip = "")
         {
@@ -95,6 +95,12 @@ namespace DandyDino.Elements
         public GUIContent Delete(string tooltip = "")
         {
             GUIContent item = CustomIcon("delete", Path);
+            item.tooltip = tooltip;
+            return item;
+        }
+        public GUIContent DependencyInjection(string tooltip = "")
+        {
+            GUIContent item = CustomIcon("dependency-injection", Path);
             item.tooltip = tooltip;
             return item;
         }
@@ -287,6 +293,36 @@ namespace DandyDino.Elements
         public GUIContent Unity(string tooltip = "")
         {
             GUIContent item = CustomIcon("unity", Path);
+            item.tooltip = tooltip;
+            return item;
+        }
+        public GUIContent View(string tooltip = "")
+        {
+            GUIContent item = CustomIcon("view", Path);
+            item.tooltip = tooltip;
+            return item;
+        }
+        public GUIContent WhiteAdd(string tooltip = "")
+        {
+            GUIContent item = CustomIcon("white-add", Path);
+            item.tooltip = tooltip;
+            return item;
+        }
+        public GUIContent WhiteArrowDown(string tooltip = "")
+        {
+            GUIContent item = CustomIcon("white-arrow-down", Path);
+            item.tooltip = tooltip;
+            return item;
+        }
+        public GUIContent WhiteMinus(string tooltip = "")
+        {
+            GUIContent item = CustomIcon("white-minus", Path);
+            item.tooltip = tooltip;
+            return item;
+        }
+        public GUIContent WhiteTrash(string tooltip = "")
+        {
+            GUIContent item = CustomIcon("white-trash", Path);
             item.tooltip = tooltip;
             return item;
         }
