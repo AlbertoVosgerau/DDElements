@@ -1,21 +1,18 @@
 {
   "name": "com.dandydino.elements",
-  "version": "0.1.7",
+  "version": "0.2.0",
   "displayName": "Dandy Dino Elements",
-  "description": null,
-  "unity": null,
-  "documentationUrl": null,
-  "changelogUrl": null,
-  "licenseUrl": null,
+  "description": "Unity Inspector and Windows Utilities for Editor - Build UI inspired in Flutter",
+  "unity": "6000.0",
+  "unityRelease": "0f1",
+  "documentationUrl": "https://github.com/AlbertoVosgerau/DDElements",
+  "changelogUrl": "https://github.com/AlbertoVosgerau/DDElements/blob/main/CHANGELOG.md",
+  "licenseUrl":  "https://github.com/AlbertoVosgerau/DDElements/blob/main/LICENSE.md",
   "dependencies": {},
   "keywords": [],
   "author": {
-    "name": "Dandy Dino",
-    "email": "alberto@argames.com.br",
-    "url": null
-  },
-  "repository": {
-    "type": null,
-    "url": null
+    "name": "Alberto Vosgerau Neto",
+    "email": "rex3dbr@gmail.com",
+    "url": "https://github.com/AlbertoVosgerau"
   }
 }
